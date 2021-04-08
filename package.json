@@ -1,0 +1,14 @@
+{
+  "name": "rl-overlay",
+  "version": "1.0.0",
+  "description": "Scenes for the overlay",
+  "repository": "git@github.com:mn-rocket-league/rl-overlay.git",
+  "author": "Ben Nylund",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "archiver": "^5.3.0"
+  }
+}
