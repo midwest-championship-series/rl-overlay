@@ -700,7 +700,7 @@
         //testStatfeed();
         //testBoost();
 
-        Relay.addListener("status_update", (data) => {
+        Relay.addListener("status_changed", (data) => {
             if(data["status"] === "INITIALIZED") {
                 
                 // match-boomermeter
