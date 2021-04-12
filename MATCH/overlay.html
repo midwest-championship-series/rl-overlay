@@ -792,6 +792,7 @@
                     if(!game["hasGame"]) {
                         document.getElementById("match-details").style.display = "none";
                     } else {
+                        console.log("updating match-details");
                         var clock = (game['isOT'] ? '+' : '') + secondsToTime(game["time"], game["time"] <= 60 && !game["isOT"]);
                         document.getElementById("match-clockp").innerText = clock;
                         document.getElementById("match-gscore").innerText = game["homeTeam"]["score"] + " - " + game["awayTeam"]["score"];
@@ -824,8 +825,8 @@
 
                         document.getElementById("match-home-img").src = game["homeTeam"]["avatar"];
                         document.getElementById("match-away-img").src = game["awayTeam"]["avatar"];
-                        document.getElementById("postgame-hteam-series").innerHTML = "";
-                        document.getElementById("postgame-ateam-series").innerHTML = "";
+                        document.getElementById("match-hteam-series").innerHTML = "";
+                        document.getElementById("match-ateam-series").innerHTML = "";
                         
                         let stw = Math.ceil(match["bestOf"] / 2);
                         for(var i = 1; i <= stw; i++){
@@ -872,6 +873,7 @@
                         else if(game["inReplay"])
                             document.getElementById("match-player").style.display = "none";
                         else {
+                            console.log("updating match-player");
                             document.getElementById("match-player").style.display = "block";
                             var { player, team } = findPlayer(game["target"]);
 
